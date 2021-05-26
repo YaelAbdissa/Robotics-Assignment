@@ -38,13 +38,10 @@ namespace gazebo
 			std::string arm3_arm4 = this->model->GetJoint("arm3_arm4_joint")->GetScopedName();
 			this->jointController->SetPositionPID(arm3_arm4, pid);
 
-			// Listen to the update event. This event is broadcast every
-			// simulation iteration.
 			this->updateConnection = event::Events::ConnectWorldUpdateBegin(
 				std::bind(&ModelPush::OnUpdate, this));
 		}
 
-		// Called by the world update start event
 	public:
 		void OnUpdate()
 		{
@@ -64,7 +61,7 @@ namespace gazebo
 			// 2 returns rotation accross Z axis
 			// If the Joint has only Z axis for rotation, 0 returns that value and 1 and 2 return nan
 			double a1 = physics::JointState(this->model->GetJoint("arm1_arm2_joint")).Position(0);
-			// double a2 = this->model->GetJoint("chasis_arm1_joint").Position(0);
+			// double a2 = this->model->GetJoint("base_arm1_joint").Position(0);
 			double a3 = physics::JointState(this->model->GetJoint("arm2_arm3_joint")).Position(0);
 			double a4 = physics::JointState(this->model->GetJoint("arm3_arm4_joint")).Position(0);
 			std::cout << "Current arm1_arm2_joint values: " << a1 * 180.0 / M_PI << std::endl;
