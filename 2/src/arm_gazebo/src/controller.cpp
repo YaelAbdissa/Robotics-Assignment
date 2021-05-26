@@ -8,8 +8,6 @@ namespace gazebo
 {
 	class ModelPush : public ModelPlugin
 	{
-
-
 	public:
 		void Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/)
 		{
@@ -25,12 +23,23 @@ namespace gazebo
 			auto joint_name = "arm1_arm2_joint";
 
 			std::string name = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
-
 			this->jointController->SetPositionPID(name, pid);
 
-			std::string name_joint2 = this->model->GetJoint("arm2_arm3_joint")->GetScopedName();
+			// base_arm1_joint
+			std::string base_arm1 = this->model->GetJoint("base_arm1_joint")->GetScopedName();
+			this->jointController->SetPositionPID(base_arm1, pid);
 
-			this->jointController->SetPositionPID(name_joint2, pid);
+			// arm1_arm2_joint
+			std::string arm1_arm2 = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
+			this->jointController->SetPositionPID(arm1_arm2, pid);
+
+			// arm2_arm3_joint
+			std::string arm2_arm3 = this->model->GetJoint("arm2_arm3_joint")->GetScopedName();
+			this->jointController->SetPositionPID(arm2_arm3, pid);
+
+			// arm3_arm4_joint
+			std::string arm3_arm4 = this->model->GetJoint("arm3_arm4_joint")->GetScopedName();
+			this->jointController->SetPositionPID(arm3_arm4, pid);
 
 			// Listen to the update event. This event is broadcast every
 			// simulation iteration.
@@ -46,6 +55,8 @@ namespace gazebo
 			float rad = M_PI * angleDegree / 180;
 
 			std::string name = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
+			std::string name1 = this->model->GetJoint("arm2_arm3_joint")->GetScopedName();
+			std::string name2 = this->model->GetJoint("arm3_arm4_joint")->GetScopedName();
 			// this->jointController->SetPositionPID(name, pid);
 			// this->jointController->SetPositionTarget(name, rad);
 			// this->jointController->Update();
@@ -57,8 +68,11 @@ namespace gazebo
 			// If the Joint has only Z axis for rotation, 0 returns that value and 1 and 2 return nan
 			double a1 = physics::JointState(this->model->GetJoint("arm1_arm2_joint")).Position(0);
 			// double a2 = this->model->GetJoint("chasis_arm1_joint").Position(0);
-			// double a3 = physics::JointState(this->model->GetJoint("chasis_arm1_joint")).Position(2);
+			double a3 = physics::JointState(this->model->GetJoint("arm2_arm3_joint")).Position(0);
+			double a4 = physics::JointState(this->model->GetJoint("arm3_arm4_joint")).Position(0);
 			std::cout << "Current arm1_arm2_joint values: " << a1 * 180.0 / M_PI << std::endl;
+			std::cout << "Current arm2_arm3_joint values: " << a3 * 180.0 / M_PI << std::endl;
+			std::cout << "Current arm3_arm4_joint values: " << a4 * 180.0 / M_PI << std::endl;
 		}
 
 		// a pointer that points to a model object

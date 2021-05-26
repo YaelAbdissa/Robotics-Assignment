@@ -46,6 +46,8 @@
 /home/yael/Robotics/gg/2/build/arm_lib/CMakeFiles/install/strip.dir
 /home/yael/Robotics/gg/2/build/arm_lib/CMakeFiles/install.dir
 /home/yael/Robotics/gg/2/build/arm_lib/CMakeFiles/list_install_components.dir
+/home/yael/Robotics/gg/2/build/arm_lib/CMakeFiles/subscriber.dir
+/home/yael/Robotics/gg/2/build/arm_lib/CMakeFiles/publisher.dir
 /home/yael/Robotics/gg/2/build/arm_lib/CMakeFiles/edit_cache.dir
 /home/yael/Robotics/gg/2/build/arm_lib/CMakeFiles/arm_lib_genpy.dir
 /home/yael/Robotics/gg/2/build/arm_lib/CMakeFiles/arm_lib_generate_messages_py.dir

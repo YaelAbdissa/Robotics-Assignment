@@ -128,6 +128,14 @@ catkin_package(
 )
 
 
+add_executable(publisher src/publisher.cpp)
+target_link_libraries(publisher ${catkin_LIBRARIES})
+add_dependencies(publisher arm_lib_generate_messages_cpp)
+
+add_executable(subscriber src/subscriber.cpp)
+target_link_libraries(subscriber ${catkin_LIBRARIES})
+add_dependencies(subscriber arm_lib_generate_messages_cpp)
+
 ###########
 ## Build ##
 ###########

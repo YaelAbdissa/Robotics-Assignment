@@ -168,6 +168,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+arm_lib/CMakeFiles/subscriber.dir/rule:
+	cd /home/yael/Robotics/gg/2/build && $(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/subscriber.dir/rule
+.PHONY : arm_lib/CMakeFiles/subscriber.dir/rule
+
+# Convenience name for target.
+subscriber: arm_lib/CMakeFiles/subscriber.dir/rule
+
+.PHONY : subscriber
+
+# fast build rule for target.
+subscriber/fast:
+	cd /home/yael/Robotics/gg/2/build && $(MAKE) -f arm_lib/CMakeFiles/subscriber.dir/build.make arm_lib/CMakeFiles/subscriber.dir/build
+.PHONY : subscriber/fast
+
+# Convenience name for target.
+arm_lib/CMakeFiles/publisher.dir/rule:
+	cd /home/yael/Robotics/gg/2/build && $(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/publisher.dir/rule
+.PHONY : arm_lib/CMakeFiles/publisher.dir/rule
+
+# Convenience name for target.
+publisher: arm_lib/CMakeFiles/publisher.dir/rule
+
+.PHONY : publisher
+
+# fast build rule for target.
+publisher/fast:
+	cd /home/yael/Robotics/gg/2/build && $(MAKE) -f arm_lib/CMakeFiles/publisher.dir/build.make arm_lib/CMakeFiles/publisher.dir/build
+.PHONY : publisher/fast
+
+# Convenience name for target.
 arm_lib/CMakeFiles/arm_lib_genpy.dir/rule:
 	cd /home/yael/Robotics/gg/2/build && $(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/arm_lib_genpy.dir/rule
 .PHONY : arm_lib/CMakeFiles/arm_lib_genpy.dir/rule
@@ -647,6 +677,60 @@ arm_lib_generate_messages_nodejs/fast:
 	cd /home/yael/Robotics/gg/2/build && $(MAKE) -f arm_lib/CMakeFiles/arm_lib_generate_messages_nodejs.dir/build.make arm_lib/CMakeFiles/arm_lib_generate_messages_nodejs.dir/build
 .PHONY : arm_lib_generate_messages_nodejs/fast
 
+src/publisher.o: src/publisher.cpp.o
+
+.PHONY : src/publisher.o
+
+# target to build an object file
+src/publisher.cpp.o:
+	cd /home/yael/Robotics/gg/2/build && $(MAKE) -f arm_lib/CMakeFiles/publisher.dir/build.make arm_lib/CMakeFiles/publisher.dir/src/publisher.cpp.o
+.PHONY : src/publisher.cpp.o
+
+src/publisher.i: src/publisher.cpp.i
+
+.PHONY : src/publisher.i
+
+# target to preprocess a source file
+src/publisher.cpp.i:
+	cd /home/yael/Robotics/gg/2/build && $(MAKE) -f arm_lib/CMakeFiles/publisher.dir/build.make arm_lib/CMakeFiles/publisher.dir/src/publisher.cpp.i
+.PHONY : src/publisher.cpp.i
+
+src/publisher.s: src/publisher.cpp.s
+
+.PHONY : src/publisher.s
+
+# target to generate assembly for a file
+src/publisher.cpp.s:
+	cd /home/yael/Robotics/gg/2/build && $(MAKE) -f arm_lib/CMakeFiles/publisher.dir/build.make arm_lib/CMakeFiles/publisher.dir/src/publisher.cpp.s
+.PHONY : src/publisher.cpp.s
+
+src/subscriber.o: src/subscriber.cpp.o
+
+.PHONY : src/subscriber.o
+
+# target to build an object file
+src/subscriber.cpp.o:
+	cd /home/yael/Robotics/gg/2/build && $(MAKE) -f arm_lib/CMakeFiles/subscriber.dir/build.make arm_lib/CMakeFiles/subscriber.dir/src/subscriber.cpp.o
+.PHONY : src/subscriber.cpp.o
+
+src/subscriber.i: src/subscriber.cpp.i
+
+.PHONY : src/subscriber.i
+
+# target to preprocess a source file
+src/subscriber.cpp.i:
+	cd /home/yael/Robotics/gg/2/build && $(MAKE) -f arm_lib/CMakeFiles/subscriber.dir/build.make arm_lib/CMakeFiles/subscriber.dir/src/subscriber.cpp.i
+.PHONY : src/subscriber.cpp.i
+
+src/subscriber.s: src/subscriber.cpp.s
+
+.PHONY : src/subscriber.s
+
+# target to generate assembly for a file
+src/subscriber.cpp.s:
+	cd /home/yael/Robotics/gg/2/build && $(MAKE) -f arm_lib/CMakeFiles/subscriber.dir/build.make arm_lib/CMakeFiles/subscriber.dir/src/subscriber.cpp.s
+.PHONY : src/subscriber.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -656,6 +740,8 @@ help:
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... subscriber"
+	@echo "... publisher"
 	@echo "... edit_cache"
 	@echo "... arm_lib_genpy"
 	@echo "... arm_lib_generate_messages_py"
@@ -692,6 +778,12 @@ help:
 	@echo "... arm_lib_geneus"
 	@echo "... arm_lib_generate_messages_lisp"
 	@echo "... arm_lib_generate_messages_nodejs"
+	@echo "... src/publisher.o"
+	@echo "... src/publisher.i"
+	@echo "... src/publisher.s"
+	@echo "... src/subscriber.o"
+	@echo "... src/subscriber.i"
+	@echo "... src/subscriber.s"
 .PHONY : help
 
 
