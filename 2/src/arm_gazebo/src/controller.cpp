@@ -21,10 +21,7 @@ namespace gazebo
 			this->pid = common::PID(30.1, 10.01, 10.03);
 
 			auto joint_name = "arm1_arm2_joint";
-
-			std::string name = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
-			this->jointController->SetPositionPID(name, pid);
-
+			
 			// base_arm1_joint
 			std::string base_arm1 = this->model->GetJoint("base_arm1_joint")->GetScopedName();
 			this->jointController->SetPositionPID(base_arm1, pid);

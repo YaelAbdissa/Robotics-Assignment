@@ -168,8 +168,6 @@ arm_gazebo/clean: arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/clean
 # Directory level rules for directory arm_lib
 
 # Recursive "all" directory target.
-arm_lib/all: arm_lib/CMakeFiles/subscriber.dir/all
-arm_lib/all: arm_lib/CMakeFiles/publisher.dir/all
 arm_lib/all: arm_lib/CMakeFiles/arm_lib_generate_messages.dir/all
 
 .PHONY : arm_lib/all
@@ -180,8 +178,6 @@ arm_lib/preinstall:
 .PHONY : arm_lib/preinstall
 
 # Recursive "clean" directory target.
-arm_lib/clean: arm_lib/CMakeFiles/subscriber.dir/clean
-arm_lib/clean: arm_lib/CMakeFiles/publisher.dir/clean
 arm_lib/clean: arm_lib/CMakeFiles/arm_lib_genpy.dir/clean
 arm_lib/clean: arm_lib/CMakeFiles/arm_lib_generate_messages_py.dir/clean
 arm_lib/clean: arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
@@ -544,60 +540,6 @@ _catkin_empty_exported_target: arm_description/CMakeFiles/_catkin_empty_exported
 arm_description/CMakeFiles/_catkin_empty_exported_target.dir/clean:
 	$(MAKE) -f arm_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make arm_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
 .PHONY : arm_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
-
-#=============================================================================
-# Target rules for target arm_lib/CMakeFiles/subscriber.dir
-
-# All Build rule for target.
-arm_lib/CMakeFiles/subscriber.dir/all: arm_lib/CMakeFiles/arm_lib_generate_messages_cpp.dir/all
-	$(MAKE) -f arm_lib/CMakeFiles/subscriber.dir/build.make arm_lib/CMakeFiles/subscriber.dir/depend
-	$(MAKE) -f arm_lib/CMakeFiles/subscriber.dir/build.make arm_lib/CMakeFiles/subscriber.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yael/Robotics/gg/2/build/CMakeFiles --progress-num=20,21 "Built target subscriber"
-.PHONY : arm_lib/CMakeFiles/subscriber.dir/all
-
-# Build rule for subdir invocation for target.
-arm_lib/CMakeFiles/subscriber.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yael/Robotics/gg/2/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/subscriber.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yael/Robotics/gg/2/build/CMakeFiles 0
-.PHONY : arm_lib/CMakeFiles/subscriber.dir/rule
-
-# Convenience name for target.
-subscriber: arm_lib/CMakeFiles/subscriber.dir/rule
-
-.PHONY : subscriber
-
-# clean rule for target.
-arm_lib/CMakeFiles/subscriber.dir/clean:
-	$(MAKE) -f arm_lib/CMakeFiles/subscriber.dir/build.make arm_lib/CMakeFiles/subscriber.dir/clean
-.PHONY : arm_lib/CMakeFiles/subscriber.dir/clean
-
-#=============================================================================
-# Target rules for target arm_lib/CMakeFiles/publisher.dir
-
-# All Build rule for target.
-arm_lib/CMakeFiles/publisher.dir/all: arm_lib/CMakeFiles/arm_lib_generate_messages_cpp.dir/all
-	$(MAKE) -f arm_lib/CMakeFiles/publisher.dir/build.make arm_lib/CMakeFiles/publisher.dir/depend
-	$(MAKE) -f arm_lib/CMakeFiles/publisher.dir/build.make arm_lib/CMakeFiles/publisher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yael/Robotics/gg/2/build/CMakeFiles --progress-num=18,19 "Built target publisher"
-.PHONY : arm_lib/CMakeFiles/publisher.dir/all
-
-# Build rule for subdir invocation for target.
-arm_lib/CMakeFiles/publisher.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yael/Robotics/gg/2/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/publisher.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yael/Robotics/gg/2/build/CMakeFiles 0
-.PHONY : arm_lib/CMakeFiles/publisher.dir/rule
-
-# Convenience name for target.
-publisher: arm_lib/CMakeFiles/publisher.dir/rule
-
-.PHONY : publisher
-
-# clean rule for target.
-arm_lib/CMakeFiles/publisher.dir/clean:
-	$(MAKE) -f arm_lib/CMakeFiles/publisher.dir/build.make arm_lib/CMakeFiles/publisher.dir/clean
-.PHONY : arm_lib/CMakeFiles/publisher.dir/clean
 
 #=============================================================================
 # Target rules for target arm_lib/CMakeFiles/arm_lib_genpy.dir

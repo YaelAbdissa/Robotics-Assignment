@@ -298,32 +298,6 @@ _catkin_empty_exported_target/fast:
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
-# Target rules for targets named subscriber
-
-# Build rule for target.
-subscriber: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 subscriber
-.PHONY : subscriber
-
-# fast build rule for target.
-subscriber/fast:
-	$(MAKE) -f arm_lib/CMakeFiles/subscriber.dir/build.make arm_lib/CMakeFiles/subscriber.dir/build
-.PHONY : subscriber/fast
-
-#=============================================================================
-# Target rules for targets named publisher
-
-# Build rule for target.
-publisher: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 publisher
-.PHONY : publisher
-
-# fast build rule for target.
-publisher/fast:
-	$(MAKE) -f arm_lib/CMakeFiles/publisher.dir/build.make arm_lib/CMakeFiles/publisher.dir/build
-.PHONY : publisher/fast
-
-#=============================================================================
 # Target rules for targets named arm_lib_genpy
 
 # Build rule for target.
@@ -1386,8 +1360,6 @@ help:
 	@echo "... gtest_main"
 	@echo "... gtest"
 	@echo "... _catkin_empty_exported_target"
-	@echo "... subscriber"
-	@echo "... publisher"
 	@echo "... arm_lib_genpy"
 	@echo "... arm_lib_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_py"
