@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/hayyuu/assignment_ws/devel/share/gennodejs/ros/first_q/msg/my_msg.js"
+  "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/share/gennodejs/ros/first_q/msg/my_msg.js"
   "CMakeFiles/first_q_generate_messages_nodejs"
 )
 

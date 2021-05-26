@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/hayyuu/assignment_ws/devel/lib/first_q/publisher"
-  "/home/hayyuu/assignment_ws/devel/lib/first_q/publisher.pdb"
+  "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/lib/first_q/publisher"
+  "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/lib/first_q/publisher.pdb"
   "CMakeFiles/publisher.dir/src/publisher.cpp.o"
 )
 

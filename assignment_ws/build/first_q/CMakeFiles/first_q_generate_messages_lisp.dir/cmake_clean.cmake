@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/hayyuu/assignment_ws/devel/share/common-lisp/ros/first_q/msg/my_msg.lisp"
+  "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/share/common-lisp/ros/first_q/msg/my_msg.lisp"
   "CMakeFiles/first_q_generate_messages_lisp"
 )
 

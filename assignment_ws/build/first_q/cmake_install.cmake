@@ -1,8 +1,8 @@
-# Install script for directory: /home/hayyuu/assignment_ws/src/first_q
+# Install script for directory: /home/hayyuu/gg/Robotics-Assignment/assignment_ws/src/first_q
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hayyuu/assignment_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,53 +38,53 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/first_q/msg" TYPE FILE FILES "/home/hayyuu/assignment_ws/src/first_q/msg/my_msg.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/first_q/msg" TYPE FILE FILES "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/src/first_q/msg/my_msg.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/first_q/cmake" TYPE FILE FILES "/home/hayyuu/assignment_ws/build/first_q/catkin_generated/installspace/first_q-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/first_q/cmake" TYPE FILE FILES "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/build/first_q/catkin_generated/installspace/first_q-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/hayyuu/assignment_ws/devel/include/first_q")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/include/first_q")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/hayyuu/assignment_ws/devel/share/roseus/ros/first_q")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/share/roseus/ros/first_q")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/hayyuu/assignment_ws/devel/share/common-lisp/ros/first_q")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/share/common-lisp/ros/first_q")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/hayyuu/assignment_ws/devel/share/gennodejs/ros/first_q")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/share/gennodejs/ros/first_q")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/hayyuu/assignment_ws/devel/lib/python3/dist-packages/first_q")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/lib/python3/dist-packages/first_q")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/hayyuu/assignment_ws/devel/lib/python3/dist-packages/first_q")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/lib/python3/dist-packages/first_q")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hayyuu/assignment_ws/build/first_q/catkin_generated/installspace/first_q.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/build/first_q/catkin_generated/installspace/first_q.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/first_q/cmake" TYPE FILE FILES "/home/hayyuu/assignment_ws/build/first_q/catkin_generated/installspace/first_q-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/first_q/cmake" TYPE FILE FILES "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/build/first_q/catkin_generated/installspace/first_q-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/first_q/cmake" TYPE FILE FILES
-    "/home/hayyuu/assignment_ws/build/first_q/catkin_generated/installspace/first_qConfig.cmake"
-    "/home/hayyuu/assignment_ws/build/first_q/catkin_generated/installspace/first_qConfig-version.cmake"
+    "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/build/first_q/catkin_generated/installspace/first_qConfig.cmake"
+    "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/build/first_q/catkin_generated/installspace/first_qConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/first_q" TYPE FILE FILES "/home/hayyuu/assignment_ws/src/first_q/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/first_q" TYPE FILE FILES "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/src/first_q/package.xml")
 endif()
 

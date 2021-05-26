@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hayyuu/assignment_ws/src
+CMAKE_SOURCE_DIR = /home/hayyuu/gg/Robotics-Assignment/assignment_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hayyuu/assignment_ws/build
+CMAKE_BINARY_DIR = /home/hayyuu/gg/Robotics-Assignment/assignment_ws/build
 
 # Utility rule file for roscpp_generate_messages_py.
 
@@ -63,10 +63,10 @@ first_q/CMakeFiles/roscpp_generate_messages_py.dir/build: roscpp_generate_messag
 .PHONY : first_q/CMakeFiles/roscpp_generate_messages_py.dir/build
 
 first_q/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	cd /home/hayyuu/assignment_ws/build/first_q && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/hayyuu/gg/Robotics-Assignment/assignment_ws/build/first_q && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : first_q/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 first_q/CMakeFiles/roscpp_generate_messages_py.dir/depend:
-	cd /home/hayyuu/assignment_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hayyuu/assignment_ws/src /home/hayyuu/assignment_ws/src/first_q /home/hayyuu/assignment_ws/build /home/hayyuu/assignment_ws/build/first_q /home/hayyuu/assignment_ws/build/first_q/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hayyuu/gg/Robotics-Assignment/assignment_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hayyuu/gg/Robotics-Assignment/assignment_ws/src /home/hayyuu/gg/Robotics-Assignment/assignment_ws/src/first_q /home/hayyuu/gg/Robotics-Assignment/assignment_ws/build /home/hayyuu/gg/Robotics-Assignment/assignment_ws/build/first_q /home/hayyuu/gg/Robotics-Assignment/assignment_ws/build/first_q/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : first_q/CMakeFiles/roscpp_generate_messages_py.dir/depend
 

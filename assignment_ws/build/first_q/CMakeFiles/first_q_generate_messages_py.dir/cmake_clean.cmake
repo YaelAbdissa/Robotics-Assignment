@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/hayyuu/assignment_ws/devel/lib/python3/dist-packages/first_q/msg/__init__.py"
-  "/home/hayyuu/assignment_ws/devel/lib/python3/dist-packages/first_q/msg/_my_msg.py"
+  "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/lib/python3/dist-packages/first_q/msg/__init__.py"
+  "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/lib/python3/dist-packages/first_q/msg/_my_msg.py"
   "CMakeFiles/first_q_generate_messages_py"
 )
 

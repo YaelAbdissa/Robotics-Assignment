@@ -67,14 +67,14 @@ set(first_q_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(first_q_SOURCE_PREFIX /home/hayyuu/assignment_ws/src/first_q)
-  set(first_q_DEVEL_PREFIX /home/hayyuu/assignment_ws/devel)
+  set(first_q_SOURCE_PREFIX /home/hayyuu/gg/Robotics-Assignment/assignment_ws/src/first_q)
+  set(first_q_DEVEL_PREFIX /home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel)
   set(first_q_INSTALL_PREFIX "")
   set(first_q_PREFIX ${first_q_DEVEL_PREFIX})
 else()
   set(first_q_SOURCE_PREFIX "")
   set(first_q_DEVEL_PREFIX "")
-  set(first_q_INSTALL_PREFIX /home/hayyuu/assignment_ws/install)
+  set(first_q_INSTALL_PREFIX /home/hayyuu/gg/Robotics-Assignment/assignment_ws/install)
   set(first_q_PREFIX ${first_q_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/hayyuu/assignment_ws/install/lib;/home/hayyuu/assignment_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/hayyuu/gg/Robotics-Assignment/assignment_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

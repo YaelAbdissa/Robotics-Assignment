@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/hayyuu/assignment_ws/devel/include/first_q/my_msg.h"
+  "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/include/first_q/my_msg.h"
   "CMakeFiles/first_q_generate_messages_cpp"
 )
 

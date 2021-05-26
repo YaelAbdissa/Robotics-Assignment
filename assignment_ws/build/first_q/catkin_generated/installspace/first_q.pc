@@ -1,4 +1,4 @@
-prefix=/home/hayyuu/assignment_ws/install
+prefix=/home/hayyuu/gg/Robotics-Assignment/assignment_ws/install
 
 Name: first_q
 Description: Description of first_q

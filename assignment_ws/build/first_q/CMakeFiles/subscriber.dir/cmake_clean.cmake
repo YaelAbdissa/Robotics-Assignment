@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/hayyuu/assignment_ws/devel/lib/first_q/subscriber"
-  "/home/hayyuu/assignment_ws/devel/lib/first_q/subscriber.pdb"
+  "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/lib/first_q/subscriber"
+  "/home/hayyuu/gg/Robotics-Assignment/assignment_ws/devel/lib/first_q/subscriber.pdb"
   "CMakeFiles/subscriber.dir/src/subscriber.cpp.o"
 )
 
