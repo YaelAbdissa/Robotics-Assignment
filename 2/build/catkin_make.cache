@@ -1,2 +1,2 @@
 arm_description:arm_gazebo:arm_lib
--DCATKIN_DEVEL_PREFIX=/home/yael/Robotics/assig_2/devel -DCMAKE_INSTALL_PREFIX=/home/yael/Robotics/assig_2/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/yael/Robotics/gg/2/devel -DCMAKE_INSTALL_PREFIX=/home/yael/Robotics/gg/2/install -G Unix Makefiles

@@ -123,7 +123,7 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES arm_gazebo
-#  CATKIN_DEPENDS arm_ib roscpp rospy std_msgs
+#  CATKIN_DEPENDS arm_lib roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 

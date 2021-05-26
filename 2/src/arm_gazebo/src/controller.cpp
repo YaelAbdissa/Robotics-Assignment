@@ -8,11 +8,13 @@ namespace gazebo
 {
 	class ModelPush : public ModelPlugin
 	{
+
+
 	public:
 		void Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/)
 		{
 			// Store the pointer to the model
-			this->model = _parent;
+			this->model = _parent; // sdf model
 
 			// // intiantiate the joint controller
 			this->jointController = this->model->GetJointController();
@@ -25,6 +27,10 @@ namespace gazebo
 			std::string name = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
 
 			this->jointController->SetPositionPID(name, pid);
+
+			std::string name_joint2 = this->model->GetJoint("arm2_arm3_joint")->GetScopedName();
+
+			this->jointController->SetPositionPID(name_joint2, pid);
 
 			// Listen to the update event. This event is broadcast every
 			// simulation iteration.
