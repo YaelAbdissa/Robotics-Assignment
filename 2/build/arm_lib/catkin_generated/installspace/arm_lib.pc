@@ -1,8 +1,0 @@
-prefix=/home/yael/Robotics/gg/2/install
-
-Name: arm_lib
-Description: Description of arm_lib
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: geometry_msgs roscpp std_msgs message_runtime geometry_msgs
