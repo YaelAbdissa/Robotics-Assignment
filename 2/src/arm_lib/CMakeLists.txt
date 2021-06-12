@@ -223,3 +223,11 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_executable(publisher src/publisher.cpp)
+target_link_libraries(publisher ${catkin_LIBRARIES})
+add_dependencies(publisher arm_lib_generate_messages_cpp)
+
+add_executable(listener src/listener.cpp)
+target_link_libraries(listener ${catkin_LIBRARIES})
+add_dependencies(listener arm_lib_generate_messages_cpp)

@@ -45,37 +45,27 @@ namespace gazebo
 	public:
 		void OnUpdate()
 		{
-			float angleDegree = -90;
-			float rad = M_PI * angleDegree / 180;
+			// float angleDegree = -90;
+			// float rad = M_PI * angleDegree / 180;
 
-			std::string name = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
-			std::string name1 = this->model->GetJoint("arm2_arm3_joint")->GetScopedName();
-			std::string name2 = this->model->GetJoint("arm3_arm4_joint")->GetScopedName();
-			// this->jointController->SetPositionPID(name, pid);
-			// this->jointController->SetPositionTarget(name, rad);
-			// this->jointController->Update();
-
-			// Get joint position by index. 
-			// 0 returns rotation accross X axis
-			// 1 returns rotation accross Y axis
-			// 2 returns rotation accross Z axis
+			// std::string name = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
+			// std::string name1 = this->model->GetJoint("arm2_arm3_joint")->GetScopedName();
+			// std::string name2 = this->model->GetJoint("arm3_arm4_joint")->GetScopedName();
+			
 			// If the Joint has only Z axis for rotation, 0 returns that value and 1 and 2 return nan
-			double a1 = physics::JointState(this->model->GetJoint("arm1_arm2_joint")).Position(0);
+			// double a1 = physics::JointState(this->model->GetJoint("arm1_arm2_joint")).Position(0);
 			// double a2 = this->model->GetJoint("base_arm1_joint").Position(0);
-			double a3 = physics::JointState(this->model->GetJoint("arm2_arm3_joint")).Position(0);
-			double a4 = physics::JointState(this->model->GetJoint("arm3_arm4_joint")).Position(0);
-			std::cout << "Current arm1_arm2_joint values: " << a1 * 180.0 / M_PI << std::endl;
-			std::cout << "Current arm2_arm3_joint values: " << a3 * 180.0 / M_PI << std::endl;
-			std::cout << "Current arm3_arm4_joint values: " << a4 * 180.0 / M_PI << std::endl;
+			// double a3 = physics::JointState(this->model->GetJoint("arm2_arm3_joint")).Position(0);
+			// double a4 = physics::JointState(this->model->GetJoint("arm3_arm4_joint")).Position(0);
+			// std::cout << "Current arm1_arm2_joint values: " << a1 * 180.0 / M_PI << std::endl;
+			// std::cout << "Current arm2_arm3_joint values: " << a3 * 180.0 / M_PI << std::endl;
+			// std::cout << "Current arm3_arm4_joint values: " << a4 * 180.0 / M_PI << std::endl;
 		}
 
 		// a pointer that points to a model object
 	private:
 		physics::ModelPtr model;
 
-		// 	// A joint controller object
-		// 	// Takes PID value and apply angular velocity
-		// 	//  or sets position of the angles
 	private:
 		physics::JointControllerPtr jointController;
 
