@@ -23,8 +23,6 @@ namespace gazebo
 
 			// // set your PID values
 			this->pid = common::PID(800, 200, 100);
-
-			auto joint_name = "arm1_arm2_joint";
 			
 			// base_arm1_joint
 			std::string base_arm1 = this->model->GetJoint("base_arm1_joint")->GetScopedName();
@@ -41,6 +39,9 @@ namespace gazebo
 			// arm3_arm4_joint
 			std::string arm3_arm4 = this->model->GetJoint("arm3_arm4_joint")->GetScopedName();
 			this->jointController->SetPositionPID(arm3_arm4, pid);
+
+			std::string arm4_palm = this->model->GetJoint("palm_arm4")->GetScopedName();
+			this->jointController->SetPositionPID(arm4_palm, pid);
 
 			int argc = 0;
 			char **argv = NULL;
@@ -59,11 +60,11 @@ namespace gazebo
 	public:
 		void OnUpdate()
 		{	
-			double a1 = physics::JointState(this->model->GetJoint("base_arm1_joint")).Position(0);
-			double a2 = physics::JointState(this->model->GetJoint("arm1_arm2_joint")).Position(0);
-			double a3 = physics::JointState(this->model->GetJoint("arm2_arm3_joint")).Position(0);
-			double a4 = physics::JointState(this->model->GetJoint("arm3_arm4_joint")).Position(0);
-			publish(a1 * 180.0 / M_PI , a2 * 180.0 / M_PI, a3 * 180.0 / M_PI , a4 * 180.0 / M_PI);
+			// double a1 = physics::JointState(this->model->GetJoint("base_arm1_joint")).Position(0);
+			// double a2 = physics::JointState(this->model->GetJoint("arm1_arm2_joint")).Position(0);
+			// double a3 = physics::JointState(this->model->GetJoint("arm2_arm3_joint")).Position(0);
+			// double a4 = physics::JointState(this->model->GetJoint("arm3_arm4_joint")).Position(0);
+			//publish(a1 * 180.0 / M_PI , a2 * 180.0 / M_PI, a3 * 180.0 / M_PI , a4 * 180.0 / M_PI);
 		}
 
 		
@@ -86,6 +87,7 @@ namespace gazebo
 			joint4 = joint4 * M_PI/ 180.0;
 
 			ROS_INFO("%f %f %f %f\n\n", joint1,joint2,joint3,joint4);
+			
 
 			this->jointController->SetPositionTarget(base_arm1, joint1);
 
@@ -111,7 +113,6 @@ namespace gazebo
 			ros::spinOnce();
 		}
 
-		// a pointer that points to a model object
 	private:
 		physics::ModelPtr model;
 
@@ -121,7 +122,7 @@ namespace gazebo
 	private:
 		event::ConnectionPtr updateConnection;
 
-		// // 	// PID object
+		// PID object
 	private:
 		common::PID pid;
 

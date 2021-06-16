@@ -231,3 +231,7 @@ add_dependencies(publisher arm_lib_generate_messages_cpp)
 add_executable(listener src/listener.cpp)
 target_link_libraries(listener ${catkin_LIBRARIES})
 add_dependencies(listener arm_lib_generate_messages_cpp)
+
+catkin_install_python(PROGRAMS scripts/lib.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
