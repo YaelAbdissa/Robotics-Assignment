@@ -58,7 +58,15 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   jointAngles.msg
+  input_command.msg
+  positions.msg
 )
+
+ add_service_files(
+   FILES
+   Fk.srv
+   Ik.srv
+ )
 
 generate_messages(
   DEPENDENCIES
@@ -224,14 +232,22 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(publisher src/publisher.cpp)
-target_link_libraries(publisher ${catkin_LIBRARIES})
-add_dependencies(publisher arm_lib_generate_messages_cpp)
-
-add_executable(listener src/listener.cpp)
+add_executable(listener src/jointsListener.cpp)
 target_link_libraries(listener ${catkin_LIBRARIES})
 add_dependencies(listener arm_lib_generate_messages_cpp)
 
-catkin_install_python(PROGRAMS scripts/lib.py
+add_executable(input_angles_publisher src/inputAnglesPublisher.cpp)
+target_link_libraries(input_angles_publisher ${catkin_LIBRARIES})
+add_dependencies(input_angles_publisher arm_lib_generate_messages_cpp)
+
+add_executable(input_command_publisher src/inputCommandPublisher.cpp)
+target_link_libraries(input_command_publisher ${catkin_LIBRARIES})
+add_dependencies(input_command_publisher arm_lib_generate_messages_cpp)
+
+catkin_install_python(PROGRAMS scripts/fk.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+catkin_install_python(PROGRAMS scripts/ik.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

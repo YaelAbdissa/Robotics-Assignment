@@ -208,6 +208,46 @@
             </axis>
         </joint>
 
+        <link name="arm5">
+            <pose>0 0 3.66 0 0 0</pose>
+            <inertial>
+                <mass>.005</mass>
+            </inertial>
+            <collision name="collision">
+                <geometry>
+                    <cylinder>
+                        <radius>.05</radius>
+                        <length>.02</length>
+                    </cylinder>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <cylinder>
+                        <radius>.05</radius>
+                        <length>.02</length>
+                    </cylinder>
+                </geometry>
+            </visual>
+        </link>
+
+        <joint name="arm4_arm5_joint" type="revolute">
+            <parent> arm4 </parent>
+            <child> arm5 </child>
+            <pose> 0 0 -0.01 0 0 0</pose>
+            <axis>
+                <xyz> 0 0 1  </xyz>
+                <dynamics>
+                    <damping>1.0</damping>
+                    <friction>0.3</friction>
+                </dynamics>
+                <limit>
+                    <effort>100</effort>
+                    <velocity>1.0</velocity>
+                </limit>
+            </axis>
+        </joint>
+
         <link name="palm">
             <pose>0.0 0.0 3.7 0 0 0</pose>
             <inertial>
@@ -239,6 +279,22 @@
                 </material>
             </visual>
         </link>
+        <joint name="palm_arm5" type="revolute">
+            <child>arm5</child>
+            <parent>palm</parent>
+            <pose> 0 0 -0.01 0 0 0</pose>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <dynamics>
+                    <damping>1.0</damping>
+                    <friction>0.3</friction>
+                </dynamics>
+                <limit>
+                    <effort>100</effort>
+                    <velocity>1.0</velocity>
+                </limit>
+            </axis>
+        </joint>
         <link name="left_finger">
             <pose>0.1 0.2 3.7 0 0 -0.78539</pose>
             <inertial>
@@ -409,21 +465,6 @@
                     <upper>0.4</upper>
                 </limit>
                 <xyz>0 0 1</xyz>
-            </axis>
-        </joint>
-        <joint name="palm_arm4" type="revolute">
-            <child>arm4</child>
-            <parent>palm</parent>
-            <axis>
-                <xyz>0 0 1</xyz>
-                <dynamics>
-                    <damping>1.0</damping>
-                    <friction>0.3</friction>
-                </dynamics>
-                <limit>
-                    <lower>0</lower>
-                    <upper>0.9</upper>
-                </limit>
             </axis>
         </joint>
         <plugin name="arm_control" filename="libarm_gazebo.so" />

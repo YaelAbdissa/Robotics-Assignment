@@ -40,21 +40,23 @@ namespace gazebo
 			std::string arm3_arm4 = this->model->GetJoint("arm3_arm4_joint")->GetScopedName();
 			this->jointController->SetPositionPID(arm3_arm4, pid);
 
-			std::string arm4_palm = this->model->GetJoint("palm_arm4")->GetScopedName();
-			this->jointController->SetPositionPID(arm4_palm, pid);
+			std::string arm4_arm5 = this->model->GetJoint("arm4_arm5")->GetScopedName();
+			this->jointController->SetPositionPID(arm4_arm5, pid);
+
+			this->pid_g common::PID(100, 200, 100);
+			jointController->SetPositionPID(model->GetJoint("arm6_arm7_joint")->GetScopedName(), this->pid_g);
+			jointController->SetPositionPID(model->GetJoint("arm6_arm8_joint")->GetScopedName(), this->pid_g);
 
 			int argc = 0;
 			char **argv = NULL;
-			ros::init(argc, argv, "talker");
+			ros::init(argc, argv, "grip_control");
 
-			ros::NodeHandle n;
-			this->pub = n.advertise<arm_lib::jointAngles>("chatter", 1000);
+			sub = n.subscribe("/positions", 1000, &ModelPush::positionsCallback, this);
 
-			ros::NodeHandle n_;
-			this->sub = n_.subscribe("chatter", 1000, &ModelPush::updateJoint, this);
+			fkClient = n.serviceClient<arm_lib::Fk>("fk");
+			ikClient = n.serviceClient<arm_lib::Ik>("ik");
 
-			this->updateConnection = event::Events::ConnectWorldUpdateBegin(
-				std::bind(&ModelPush::OnUpdate, this));
+			ros::spinOnce();
 		}
 
 	public:
@@ -113,6 +115,52 @@ namespace gazebo
 			ros::spinOnce();
 		}
 
+		void GetFk(double a1, double a2, double a3, double a4, double a5, double a6)
+		{
+			arm_lib::Fk srv;
+			srv.request.link_lengths = {0.05, 2, 1, 0.5, 0.02, 0.02};
+			srv.request.joint_positions = {a1, a2, a3, a4, a5, a6};
+
+			if (fkClient.call(srv))
+			{
+				ROS_INFO("Fk: [%f, %f, %f]", srv.response.position[0], srv.response.position[1], srv.response.position[2]);
+			}
+			else
+			{
+				ROS_ERROR("Failed to call service fk");
+			}
+		}
+
+		public:
+		void positionsCallback(const arm_lib::positions &msg)
+		{
+			ROS_INFO("Received %f %f %f", msg.x, msg.y, msg.z);
+
+			arm_lib::Ik srv;
+			srv.request.link_lengths = {0.15, 2, 1, 0.5, 0.02, 0.02};
+			srv.request.joint_positions = {0, 0, 0, 0, 0, 0};
+			srv.request.positions = {msg.x, msg.y, msg.z};
+
+			for (int i = 0; i < jointList.size() - 4; i++)
+			{
+				srv.request.joint_positions[i] = physics::JointState(jointList[i]).Position(0);
+			}
+
+			if (ikClient.call(srv))
+			{				
+				ROS_INFO("Ik: [%f, %f, %f, %f, %f, %f]", srv.response.target_positions[0], srv.response.target_positions[1], srv.response.target_positions[2], srv.response.target_positions[3], srv.response.target_positions[4], srv.response.target_positions[5]);
+
+				for (int i = 0; i < jointList.size() - 4; i++)
+				{
+					jointController->SetPositionTarget(jointList[i]->GetScopedName(), srv.response.target_positions[i]);
+				}
+			}
+			else
+			{
+				ROS_ERROR("Failed to call service ik");
+			}
+		}
+
 	private:
 		physics::ModelPtr model;
 
@@ -127,8 +175,22 @@ namespace gazebo
 		common::PID pid;
 
 	private:
-		ros::Publisher pub;
+		common::PID pid_g;
+
+	private:
+		physics::Joint_V jointList;
+
+	private:
 		ros::Subscriber sub;
+
+	private:
+		ros::NodeHandle n;
+
+	private:
+		ros::ServiceClient fkClient;
+
+	private: 
+		ros::ServiceClient ikClient;
 	};
 
 	// Register this plugin with the simulator
