@@ -30,11 +30,11 @@ include_directories(
   ${std_msgs_INCLUDE_DIRS}
 )
 
-add_library(${PROJECT_NAME} SHARED src/controller.cpp) 
 add_library(gripper SHARED src/gripper.cpp)
-
-target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
 target_link_libraries(gripper ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
+
+add_library(${PROJECT_NAME} SHARED src/controller.cpp) 
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed

@@ -60,11 +60,11 @@ arm_lib/CMakeFiles/arm_lib_generate_messages_eus: /home/henocq/Music/Robotics-As
 /home/henocq/Music/Robotics-Assignment/2/devel/share/roseus/ros/arm_lib/msg/jointAngles.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/henocq/Music/Robotics-Assignment/2/devel/share/roseus/ros/arm_lib/msg/jointAngles.l: /home/henocq/Music/Robotics-Assignment/2/src/arm_lib/msg/jointAngles.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/henocq/Music/Robotics-Assignment/2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from arm_lib/jointAngles.msg"
-	cd /home/henocq/Music/Robotics-Assignment/2/build/arm_lib && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/henocq/Music/Robotics-Assignment/2/src/arm_lib/msg/jointAngles.msg -Iarm_lib:/home/henocq/Music/Robotics-Assignment/2/src/arm_lib/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/henocq/Music/Robotics-Assignment/2/devel/share/roseus/ros/arm_lib/msg
+	cd /home/henocq/Music/Robotics-Assignment/2/build/arm_lib && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/henocq/Music/Robotics-Assignment/2/src/arm_lib/msg/jointAngles.msg -Iarm_lib:/home/henocq/Music/Robotics-Assignment/2/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/henocq/Music/Robotics-Assignment/2/devel/share/roseus/ros/arm_lib/msg
 
 /home/henocq/Music/Robotics-Assignment/2/devel/share/roseus/ros/arm_lib/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/henocq/Music/Robotics-Assignment/2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for arm_lib"
-	cd /home/henocq/Music/Robotics-Assignment/2/build/arm_lib && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/henocq/Music/Robotics-Assignment/2/devel/share/roseus/ros/arm_lib arm_lib geometry_msgs std_msgs
+	cd /home/henocq/Music/Robotics-Assignment/2/build/arm_lib && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/henocq/Music/Robotics-Assignment/2/devel/share/roseus/ros/arm_lib arm_lib std_msgs
 
 arm_lib_generate_messages_eus: arm_lib/CMakeFiles/arm_lib_generate_messages_eus
 arm_lib_generate_messages_eus: /home/henocq/Music/Robotics-Assignment/2/devel/share/roseus/ros/arm_lib/msg/jointAngles.l

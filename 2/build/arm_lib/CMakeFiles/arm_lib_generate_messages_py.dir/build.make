@@ -55,21 +55,28 @@ include arm_lib/CMakeFiles/arm_lib_generate_messages_py.dir/progress.make
 
 arm_lib/CMakeFiles/arm_lib_generate_messages_py: /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg/_jointAngles.py
 arm_lib/CMakeFiles/arm_lib_generate_messages_py: /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg/__init__.py
+arm_lib/CMakeFiles/arm_lib_generate_messages_py: /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/srv/__init__.py
 
 
 /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg/_jointAngles.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg/_jointAngles.py: /home/henocq/Music/Robotics-Assignment/2/src/arm_lib/msg/jointAngles.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/henocq/Music/Robotics-Assignment/2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG arm_lib/jointAngles"
-	cd /home/henocq/Music/Robotics-Assignment/2/build/arm_lib && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/henocq/Music/Robotics-Assignment/2/src/arm_lib/msg/jointAngles.msg -Iarm_lib:/home/henocq/Music/Robotics-Assignment/2/src/arm_lib/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg
+	cd /home/henocq/Music/Robotics-Assignment/2/build/arm_lib && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/henocq/Music/Robotics-Assignment/2/src/arm_lib/msg/jointAngles.msg -Iarm_lib:/home/henocq/Music/Robotics-Assignment/2/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg
 
 /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg/__init__.py: /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg/_jointAngles.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/henocq/Music/Robotics-Assignment/2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for arm_lib"
 	cd /home/henocq/Music/Robotics-Assignment/2/build/arm_lib && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg --initpy
 
+/home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/srv/__init__.py: /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg/_jointAngles.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/henocq/Music/Robotics-Assignment/2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python srv __init__.py for arm_lib"
+	cd /home/henocq/Music/Robotics-Assignment/2/build/arm_lib && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/srv --initpy
+
 arm_lib_generate_messages_py: arm_lib/CMakeFiles/arm_lib_generate_messages_py
 arm_lib_generate_messages_py: /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg/_jointAngles.py
 arm_lib_generate_messages_py: /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/msg/__init__.py
+arm_lib_generate_messages_py: /home/henocq/Music/Robotics-Assignment/2/devel/lib/python3/dist-packages/arm_lib/srv/__init__.py
 arm_lib_generate_messages_py: arm_lib/CMakeFiles/arm_lib_generate_messages_py.dir/build.make
 
 .PHONY : arm_lib_generate_messages_py
